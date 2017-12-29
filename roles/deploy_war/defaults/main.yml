@@ -1,0 +1,3 @@
+docker_folder: 'mytomcat'
+image_version: '1.0'
+ports: "9999:8080"
