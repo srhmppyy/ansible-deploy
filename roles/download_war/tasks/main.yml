@@ -5,12 +5,12 @@
 
 - name: Clone
   git:
-    repo: "http://{{ username }}:{{ password }}@54.241.127.241/gitlab/depwaswho/tomcat.git"
+    repo: "http://{{ username }}:{{ password }}@54.183.118.41:djcrucena/tomcat.git"
     dest: "{{ docker_folder }}"
 
 - name: Download war file
   get_url:
-    url: http://54.241.127.241/nexus/content/repositories/snapshots/DTSActivity/CurrencyConverter/1/CurrencyConverter-1.war
+    url: http://54.183.118.41/nexus/content/repositories/snapshots/DTSActivity/CurrencyConverter/1/CurrencyConverter-1.war
     dest: "{{ docker_folder }}/resources"
     mode: 0644
     url_password: "{{ password }}"
