@@ -11,7 +11,14 @@
 - name: Download war file
   get_url:
     url: http://54.183.118.41/nexus/content/repositories/snapshots/DTSActivity/CurrencyConverter/1/CurrencyConverter-1.war
-    dest: "{{ docker_folder }}/resources"
+    dest: "{{ docker_folder }}/Resources/CurrencyConverter-1.war"
     mode: 0644
     url_password: "{{ password }}"
     url_username: "{{ username }}"
+
+- name: Check
+  shell: "pwd && ls -lart && whoami"
+  register: output
+  
+- name: Display
+  debug: var=output
