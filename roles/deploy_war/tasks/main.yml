@@ -1,4 +1,12 @@
 ---
+- easy_install: name=pip state=latest
+- name: Docker-PY
+  pip:
+    name: "{{ item }}"
+  with_items:
+  - six==1.4
+  - docker-py==1.7.0
+  
 - name: Delete Container
   docker:
     name: tomcat
