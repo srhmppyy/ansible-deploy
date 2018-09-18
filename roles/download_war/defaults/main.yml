@@ -1,1 +1,1 @@
-docker_folder: 'mytomcat'
+docker_folder: '/mytomcat'
